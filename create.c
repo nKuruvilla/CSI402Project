@@ -11,18 +11,19 @@ if (argc == 1 || argc > 4){
     printf("Please input a proper command.\n");
     exit(0);
 }else if (argc == 3){
+    if (strcmp(argv[1], '-f') == 0){
  /*Here is where we will place the code for filepath:
  *      create -f filepath
  *          ~ creates an empty, ordinary file whose name is given in the specified path.
  *            The path can be an absolute, relative, or a bare filename. The new file should
  *            have permission 0640 specified in octal.
  */
- 
+    }else if (strcmp(argv[1], '-d') == 0){
  /*Here is where we will place the code for dirpath:
  *      create -d dirpath
  *          ~ creates a new directory whose name is given in the specified path. New file should  
  *            have permission 0750 specified in octal.
- */
+  */}
 }else if (argc == 4){
  /*Here is where we will place the code for hard link:
  *      create -h oldname linkname
