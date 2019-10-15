@@ -19,7 +19,19 @@ int main (int argc, char *argv[]){
      *          ~ creates an empty, ordinary file whose name is given in the specified path.
      *            The path can be an absolute, relative, or a bare filename. The new file should
      *            have permission 0640 specified in octal.
-     */
+      */      
+            File *f;
+            
+            char mode[] = "0640";
+            int m = strtol(mode, 0, 8);
+            f = fopen(argv[3], "w");
+            if(chmod(arge[3], m) < 0){
+               fprintf(stderr, "File creation failed");
+               exit(1);
+            }
+            printf("File creation sucessful");
+            
+     
         }else if (strcmp(argv[1], "-d") == 0){
             printf("-d\n");
      /*Here is where we will place the code for dirpath:
